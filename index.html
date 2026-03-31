@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Firoj — Aspiring Data Scientist. Explore my portfolio showcasing projects in Python, Machine Learning, and Data Analysis.">
+    <title>FIROJ | Data Scientist Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Cursor Glow -->
+    <div id="cursor-glow" class="cursor-glow"></div>
+
+    <!-- Three.js Canvas -->
+    <canvas id="three-canvas"></canvas>
+
+    <!-- Navbar -->
+    <nav id="navbar" class="navbar">
+        <div class="nav-container">
+            <a href="#hero" class="nav-logo">
+                <span class="logo-bracket">&lt;</span>FIROJ<span class="logo-dot">.</span><span
+                    class="logo-bracket">/&gt;</span>
+            </a>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="#hero" class="nav-link active">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#experience" class="nav-link">Experience</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="nav-actions">
+                <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">
+                    <i class="fas fa-moon"></i>
+                    <i class="fas fa-sun"></i>
+                </button>
+                <button id="nav-hamburger" class="nav-hamburger" aria-label="Toggle menu">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero-section">
+        <div class="hero-content">
+            <div class="hero-text">
+                <div class="hero-badge">
+                    <span class="badge-dot"></span>
+                    <span>Available for Opportunities</span>
+                </div>
+                <h1 class="hero-name">
+                    <span class="name-line">
+                        <span class="name-word" data-animate>FIROJ</span>
+                    </span>
+                </h1>
+                <p class="hero-subtitle">Aspiring Data Scientist</p>
+                <div class="typing-wrapper">
+                    <span class="typing-prefix">&gt;&nbsp;</span>
+                    <span id="typing-text" class="typing-text"></span>
+                    <span class="typing-cursor">|</span>
+                </div>
+                <div class="hero-cta">
+                    <a href="#projects" class="btn-primary" id="cta-projects">
+                        <span>View Projects</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                    <a href="#contact" class="btn-secondary" id="cta-contact">
+                        <span>Get in Touch</span>
+                    </a>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <span class="stat-number" data-count="5">0</span><span class="stat-plus">+</span>
+                        <span class="stat-label">Projects</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number" data-count="3">0</span><span class="stat-plus">+</span>
+                        <span class="stat-label">Skills</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number" data-count="1">0</span>
+                        <span class="stat-label">Certifications</span>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-3d" id="hero-3d-container">
+                <!-- Three.js neural sphere renders here -->
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <div class="scroll-line"></div>
+            <span>Scroll to explore</span>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section about-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">&lt;about&gt;</span>
+                <h2 class="section-title">About <span class="highlight">Me</span></h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="about-grid">
+                <div class="about-card about-info">
+                    <div class="about-avatar">
+                        <div class="avatar-ring"></div>
+                        <div class="avatar-initials">F</div>
+                    </div>
+                    <h3>Who I Am</h3>
+                    <p>I'm a passionate and driven <strong>aspiring Data Scientist</strong> with a deep curiosity for
+                        uncovering insights from data. I specialize in building intelligent systems using
+                        <strong>Python, Machine Learning, and Data Analysis</strong>.
+                    </p>
+                    <p>My goal is to leverage the power of data to solve real-world problems and contribute to the
+                        rapidly evolving field of Artificial Intelligence. I believe in continuous learning and pushing
+                        the boundaries of what's possible with data.</p>
+                </div>
+                <div class="about-cards-grid">
+                    <div class="about-mini-card" data-tilt>
+                        <div class="mini-card-icon">
+                            <i class="fas fa-brain"></i>
+                        </div>
+                        <h4>Machine Learning</h4>
+                        <p>Building predictive models and intelligent systems</p>
+                    </div>
+                    <div class="about-mini-card" data-tilt>
+                        <div class="mini-card-icon">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <h4>Data Analysis</h4>
+                        <p>Extracting meaningful insights from complex datasets</p>
+                    </div>
+                    <div class="about-mini-card" data-tilt>
+                        <div class="mini-card-icon">
+                            <i class="fas fa-robot"></i>
+                        </div>
+                        <h4>AI Development</h4>
+                        <p>Creating AI-powered solutions for real-world problems</p>
+                    </div>
+                    <div class="about-mini-card" data-tilt>
+                        <div class="mini-card-icon">
+                            <i class="fas fa-database"></i>
+                        </div>
+                        <h4>Data Engineering</h4>
+                        <p>Designing efficient data pipelines and architectures</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="section skills-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">&lt;skills&gt;</span>
+                <h2 class="section-title">My <span class="highlight">Skills</span></h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="skills-categories">
+                <button class="skill-tab active" data-category="all">All</button>
+                <button class="skill-tab" data-category="programming">Programming</button>
+                <button class="skill-tab" data-category="ml">ML & AI</button>
+                <button class="skill-tab" data-category="tools">Tools</button>
+                <button class="skill-tab" data-category="database">Database</button>
+            </div>
+            <div class="skills-grid" id="skills-grid">
+                <!-- Programming -->
+                <div class="skill-card" data-category="programming" data-tilt>
+                    <div class="skill-icon"><i class="fab fa-python"></i></div>
+                    <h4>Python</h4>
+                    <div class="skill-bar">
+                        <div class="skill-fill" data-level="90"></div>
+                    </div>
+                    <span class="skill-percent">90%</span>
+                </div>
+                <div class="skill-card" data-category="programming" data-tilt>
+                    <div class="skill-icon"><i class="fab fa-js-square"></i></div>
+                    <h4>JavaScript</h4>
+                    <div class="skill-bar">
+                        <div class="skill-fill" data-level="65"></div>
+                    </div>
+                    <span class="skill-percent">65%</span>
+                </div>
+                <div class="skill-card" data-category="programming" data-tilt>
+                    <div class="skill-icon"><i class="fas fa-code"></i></div>
+                    <h4>R Language</h4>
+                    <div class="skill-bar">
+                        <div class="skill-fill" data-level="60"></div>
+                    </div>
+                    <span class="skill-percent">60%</span>
+                </div>
+                <div class="skill-card" data-category="programming" data-tilt>
+                    <div class="skill-icon"><i class="fab fa-html5"></i></div>
+                    <h4>HTML/CSS</h4>
+                    <div class="skill-bar">
+                        <div class="skill-fill" data-level="75"></div>
+                    </div>
+                    <span class="skill-percent">75%</span>
+                </div>
+                <!-- ML & AI -->
+                <div class="skill-card" data-category="ml" data-tilt>
+                    <div class="skill-icon"><i class="fas fa-brain"></i></div>
+                    <h4>Machine Learning</h4>
+                    <div class="skill-bar">
+                        <div class="skill-fill" data-level="85"></div>
+                    </div>
+                    <span class="skill-percent">85%</span>
+                </div>
+                <div class="skill-card" data-category="ml" data-tilt>
+                    <div class="skill-icon"><i class="fas fa-network-wired"></i></div>
+                    <h4>Deep Learning</h4>
+                    <div class="skill-bar">
+                        <div class="skill-fill" data-level="70"></div>
+                    </div>
+                    <span class="skill-percent">70%</span>
+                </div>
+                <div class="skill-card" data-category="ml" data-tilt>
+                    <div class="skill-icon"><i class="fas fa-language"></i></div>
+                    <h4>NLP</h4>
+                    <div class="skill-bar">
+                        <div class="skill-fill" data-level="65"></div>
+                    </div>
+                    <span class="skill-percent">65%</span>
+                </div>
+                <div class="skill-card" data-category="ml" data-tilt>
+                    <div class="skill-icon"><i class="fas fa-chart-bar"></i></div>
+                    <h4>Data Visualization</h4>
+                    <div class="skill-bar">
+                        <div class="skill-fill" data-level="80"></div>
+                    </div>
+                    <span class="skill-percent">80%</span>
+                </div>
+                <!-- Tools -->
+                <div class="skill-card" data-category="tools" data-tilt>
+                    <div class="skill-icon"><i class="fab fa-git-alt"></i></div>
+                    <h4>Git & GitHub</h4>
+                    <div class="skill-bar">
+                        <div class="skill-fill" data-level="80"></div>
+                    </div>
+                    <span class="skill-percent">80%</span>
+                </div>
+                <div class="skill-card" data-category="tools" data-tilt>
+                    <div class="skill-icon"><i class="fas fa-flask"></i></div>
+                    <h4>Jupyter / Colab</h4>
+                    <div class="skill-bar">
+                        <div class="skill-fill" data-level="90"></div>
+                    </div>
+                    <span class="skill-percent">90%</span>
+                </div>
+                <div class="skill-card" data-category="tools" data-tilt>
+                    <div class="skill-icon"><i class="fas fa-server"></i></div>
+                    <h4>Flask / FastAPI</h4>
+                    <div class="skill-bar">
+                        <div class="skill-fill" data-level="60"></div>
+                    </div>
+                    <span class="skill-percent">60%</span>
+                </div>
+                <div class="skill-card" data-category="tools" data-tilt>
+                    <div class="skill-icon"><i class="fab fa-docker"></i></div>
+                    <h4>Docker</h4>
+                    <div class="skill-bar">
+                        <div class="skill-fill" data-level="55"></div>
+                    </div>
+                    <span class="skill-percent">55%</span>
+                </div>
+                <!-- Database -->
+                <div class="skill-card" data-category="database" data-tilt>
+                    <div class="skill-icon"><i class="fas fa-database"></i></div>
+                    <h4>MySQL</h4>
+                    <div class="skill-bar">
+                        <div class="skill-fill" data-level="80"></div>
+                    </div>
+                    <span class="skill-percent">80%</span>
+                </div>
+                <div class="skill-card" data-category="database" data-tilt>
+                    <div class="skill-icon"><i class="fas fa-leaf"></i></div>
+                    <h4>MongoDB</h4>
+                    <div class="skill-bar">
+                        <div class="skill-fill" data-level="65"></div>
+                    </div>
+                    <span class="skill-percent">65%</span>
+                </div>
+                <div class="skill-card" data-category="database" data-tilt>
+                    <div class="skill-icon"><i class="fas fa-table"></i></div>
+                    <h4>PostgreSQL</h4>
+                    <div class="skill-bar">
+                        <div class="skill-fill" data-level="70"></div>
+                    </div>
+                    <span class="skill-percent">70%</span>
+                </div>
+                <div class="skill-card" data-category="database" data-tilt>
+                    <div class="skill-icon"><i class="fas fa-fire"></i></div>
+                    <h4>Firebase</h4>
+                    <div class="skill-bar">
+                        <div class="skill-fill" data-level="50"></div>
+                    </div>
+                    <span class="skill-percent">50%</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section projects-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">&lt;projects&gt;</span>
+                <h2 class="section-title">Featured <span class="highlight">Projects</span></h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="projects-grid">
+                <!-- Highlight Project -->
+                <div class="project-card featured" data-tilt>
+                    <div class="project-glow"></div>
+                    <div class="project-badge">⭐ Featured</div>
+                    <div class="project-content">
+                        <h3>CardioVision AI</h3>
+                        <p class="project-subtitle">Heart Disease Prediction System</p>
+                        <p>An advanced ML-powered diagnostic tool that predicts heart disease risk using patient health
+                            data. Achieves 92% accuracy using ensemble learning methods with a clean interactive
+                            dashboard.</p>
+                        <div class="project-tech">
+                            <span>Python</span><span>Scikit-Learn</span><span>Flask</span><span>Pandas</span><span>Plotly</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="project-link"><i class="fab fa-github"></i> Code</a>
+                            <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card" data-tilt>
+                    <div class="project-glow"></div>
+                    <div class="project-content">
+                        <h3>SentimentScope</h3>
+                        <p class="project-subtitle">Social Media Sentiment Analyzer</p>
+                        <p>Real-time NLP pipeline that analyzes sentiment from Twitter/Reddit data streams using
+                            transformer models and visualizes trends with interactive dashboards.</p>
+                        <div class="project-tech">
+                            <span>Python</span><span>NLTK</span><span>Transformers</span><span>Streamlit</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="project-link"><i class="fab fa-github"></i> Code</a>
+                            <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card" data-tilt>
+                    <div class="project-glow"></div>
+                    <div class="project-content">
+                        <h3>StockPulse</h3>
+                        <p class="project-subtitle">Stock Price Forecasting</p>
+                        <p>LSTM-based deep learning model for predicting stock price movements with technical indicators
+                            integration and real-time market data processing.</p>
+                        <div class="project-tech">
+                            <span>Python</span><span>TensorFlow</span><span>Keras</span><span>Yahoo Finance API</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="project-link"><i class="fab fa-github"></i> Code</a>
+                            <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card" data-tilt>
+                    <div class="project-glow"></div>
+                    <div class="project-content">
+                        <h3>DataClean Pro</h3>
+                        <p class="project-subtitle">Automated Data Preprocessing Tool</p>
+                        <p>An intelligent data cleaning pipeline that automatically handles missing values, outliers,
+                            encoding, and feature scaling with comprehensive EDA reports.</p>
+                        <div class="project-tech">
+                            <span>Python</span><span>Pandas</span><span>NumPy</span><span>Matplotlib</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="project-link"><i class="fab fa-github"></i> Code</a>
+                            <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card" data-tilt>
+                    <div class="project-glow"></div>
+                    <div class="project-content">
+                        <h3>VisionDetect</h3>
+                        <p class="project-subtitle">Object Detection System</p>
+                        <p>Real-time object detection using YOLOv8 with custom-trained models for specific use cases.
+                            Features a web interface for image/video upload and processing.</p>
+                        <div class="project-tech">
+                            <span>Python</span><span>YOLOv8</span><span>OpenCV</span><span>FastAPI</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="project-link"><i class="fab fa-github"></i> Code</a>
+                            <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="section experience-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">&lt;experience&gt;</span>
+                <h2 class="section-title">My <span class="highlight">Journey</span></h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="timeline">
+                <div class="timeline-line"></div>
+                <div class="timeline-item" data-side="left">
+                    <div class="timeline-node"><i class="fas fa-graduation-cap"></i></div>
+                    <div class="timeline-card" data-tilt>
+                        <span class="timeline-date">2023 — Present</span>
+                        <h3>B.Tech in Computer Science</h3>
+                        <p class="timeline-org">Specialization in Data Science & AI</p>
+                        <p>Pursuing Bachelor's degree with focus on Machine Learning, Data Analysis, and AI-driven
+                            system development. Active participant in hackathons and coding competitions.</p>
+                    </div>
+                </div>
+                <div class="timeline-item" data-side="right">
+                    <div class="timeline-node"><i class="fas fa-briefcase"></i></div>
+                    <div class="timeline-card" data-tilt>
+                        <span class="timeline-date">2024 — Summer</span>
+                        <h3>Data Science Intern</h3>
+                        <p class="timeline-org">Tech Company</p>
+                        <p>Worked on building predictive models for customer churn analysis. Performed EDA, feature
+                            engineering, and model optimization achieving 15% improvement in prediction accuracy.</p>
+                    </div>
+                </div>
+                <div class="timeline-item" data-side="left">
+                    <div class="timeline-node"><i class="fas fa-certificate"></i></div>
+                    <div class="timeline-card" data-tilt>
+                        <span class="timeline-date">2024</span>
+                        <h3>ML & Deep Learning Certification</h3>
+                        <p class="timeline-org">Online Learning Platform</p>
+                        <p>Completed comprehensive certification covering supervised/unsupervised learning, neural
+                            networks, CNNs, RNNs, and deployment of ML models in production environments.</p>
+                    </div>
+                </div>
+                <div class="timeline-item" data-side="right">
+                    <div class="timeline-node"><i class="fas fa-trophy"></i></div>
+                    <div class="timeline-card" data-tilt>
+                        <span class="timeline-date">2025</span>
+                        <h3>Hackathon Winner</h3>
+                        <p class="timeline-org">National Data Science Competition</p>
+                        <p>Led a team to develop CardioVision AI — a heart disease prediction system. Won first place
+                            for innovative approach using ensemble learning and clean dashboard design.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section contact-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">&lt;contact&gt;</span>
+                <h2 class="section-title">Get In <span class="highlight">Touch</span></h2>
+                <div class="section-line"></div>
+                <p class="section-desc">Have a project in mind or want to collaborate? Feel free to reach out!</p>
+            </div>
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <div class="contact-card" data-tilt>
+                        <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+                        <h4>Email</h4>
+                        <p>firoj@example.com</p>
+                    </div>
+                    <div class="contact-card" data-tilt>
+                        <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
+                        <h4>Location</h4>
+                        <p>India</p>
+                    </div>
+                    <div class="social-links">
+                        <a href="#" class="social-icon" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="social-icon" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                        <a href="#" class="social-icon" aria-label="Twitter"><i class="fab fa-x-twitter"></i></a>
+                        <a href="#" class="social-icon" aria-label="Kaggle"><i class="fab fa-kaggle"></i></a>
+                    </div>
+                </div>
+                <form id="contact-form" class="contact-form">
+                    <div class="form-group">
+                        <input type="text" id="form-name" name="name" placeholder=" " required>
+                        <label for="form-name">Your Name</label>
+                        <div class="form-line"></div>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="form-email" name="email" placeholder=" " required>
+                        <label for="form-email">Your Email</label>
+                        <div class="form-line"></div>
+                    </div>
+                    <div class="form-group">
+                        <textarea id="form-message" name="message" placeholder=" " rows="5" required></textarea>
+                        <label for="form-message">Your Message</label>
+                        <div class="form-line"></div>
+                    </div>
+                    <button type="submit" class="btn-primary" id="submit-btn">
+                        <span>Send Message</span>
+                        <i class="fas fa-paper-plane"></i>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-top">
+                <a href="#hero" class="footer-logo">
+                    <span class="logo-bracket">&lt;</span>FIROJ<span class="logo-bracket">/&gt;</span>
+                </a>
+                <p class="footer-tagline">Turning data into stories, one model at a time.</p>
+            </div>
+            <div class="footer-divider"></div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Firoj. Crafted with <span class="heart">&hearts;</span> and data.</p>
+                <div class="footer-links">
+                    <a href="#about">About</a>
+                    <a href="#projects">Projects</a>
+                    <a href="#contact">Contact</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
